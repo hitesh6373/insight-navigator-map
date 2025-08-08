@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Video, Scissors, Zap, ArrowRight } from "lucide-react";
+import { Video, Scissors, Zap, Music, ArrowRight } from "lucide-react";
 
 const categories = [
   {
@@ -20,6 +20,12 @@ const categories = [
     title: "LogoDrop",
     description: "Your logo isn't just seen, it's remembered. Our creators organically blend your brand into viral content, making it a natural part of the video. Just Upload your logo and vibe, and watch your brand show up everywhere.",
     gradient: "from-brand-accent to-brand-accent/80"
+  },
+  {
+    icon: Music,
+    title: "SoundSync",
+    description: "Your track becomes the heartbeat of trends. From chill transitions to emotional edits — creators turn your sound into moments people remember. Upload your track → Creators use it in vlogs, edits, mood videos, or transitions → Audiences vibe → Streams rise, visibility multiplies.",
+    gradient: "from-purple-500 to-purple-400"
   }
 ];
 
@@ -38,7 +44,7 @@ export const CategoriesSection = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {categories.map((category, index) => (
             <Card 
               key={index} 
