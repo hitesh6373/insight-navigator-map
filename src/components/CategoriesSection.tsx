@@ -31,7 +31,7 @@ const categories = [
 
 export const CategoriesSection = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-muted/10 to-background">
+    <section id="categories" className="py-24 px-6 bg-gradient-to-br from-muted/10 to-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -47,7 +47,8 @@ export const CategoriesSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {categories.map((category, index) => (
             <Card 
-              key={index} 
+              key={index}
+              id={category.title.toLowerCase().replace(/\s+/g, "-")}
               className="group relative p-8 bg-gradient-card border-border/50 hover:border-brand-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-glow"
             >
               {/* Icon */}

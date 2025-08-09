@@ -1,34 +1,65 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Github, Star } from "lucide-react";
-import bennyBucksLogo from "@/assets/bennybucks-logo.png";
+import { ArrowRight, TrendingUp, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Navigation */}
       <nav className="relative z-50 flex items-center justify-between p-6 max-w-7xl mx-auto">
-        <div className="flex items-center gap-3">
-          <img src={bennyBucksLogo} alt="BennyBucks" className="w-8 h-8" />
-          <span className="text-white text-xl font-semibold">bennybucks</span>
-        </div>
+        {/* Left: Logo + Name */}
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src="/lovable-uploads/a4535882-b6a1-4f94-aeb8-435c87f344dc.png"
+            alt="BennyBucks logo"
+            className="w-8 h-8 object-contain"
+          />
+          <span className="text-foreground text-xl font-semibold">BennyBucks</span>
+        </Link>
         
+        {/* Center: Nav */}
         <div className="hidden md:flex items-center gap-8 text-sm">
-          <span className="text-slate-300 hover:text-white cursor-pointer">Product</span>
-          <span className="text-slate-300 hover:text-white cursor-pointer">Use cases</span>
-          <span className="text-slate-300 hover:text-white cursor-pointer">Docs</span>
-          <span className="text-slate-300 hover:text-white cursor-pointer">Community</span>
-          <span className="text-slate-300 hover:text-white cursor-pointer">Enterprise</span>
-          <span className="text-slate-300 hover:text-white cursor-pointer">Pricing</span>
+          <Link to="/#creators" className="text-muted-foreground hover:text-foreground">Creators</Link>
+          <Link to="/#brands" className="text-muted-foreground hover:text-foreground">Brands</Link>
+
+          {/* Verticals dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1">
+              Verticals <ChevronDown className="w-4 h-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="z-[60]">
+              <DropdownMenuItem asChild>
+                <Link to="/#creator-originals">Creator Originals</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/#clipping">Clipping</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/#soundsync">MusicSync</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/#logodrop">LogoDrop</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Link to="/about" className="text-muted-foreground hover:text-foreground">About</Link>
         </div>
         
-        <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-2 text-slate-300">
-            <Github className="w-4 h-4" />
-            <Star className="w-4 h-4" />
-            <span className="text-sm">127,673</span>
-          </div>
-          <Button variant="ghost" className="text-slate-300 hover:text-white">Sign in</Button>
-          <Button variant="hero" size="sm">Get Started</Button>
+        {/* Right: CTAs */}
+        <div className="flex items-center gap-3">
+          <Link to="/login">
+            <Button variant="outline" size="sm">Launch your campaign</Button>
+          </Link>
+          <Link to="/signup">
+            <Button variant="hero" size="sm">Start as a Creator</Button>
+          </Link>
         </div>
       </nav>
 
@@ -60,14 +91,18 @@ export const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg">
-                Start your campaign
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:bg-slate-800">
-                <TrendingUp className="w-5 h-5 mr-2" />
-                Start as a Creator
-              </Button>
+              <Link to="/login">
+                <Button variant="hero" size="lg">
+                  Launch your campaign
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button variant="outline" size="lg">
+                  <TrendingUp className="w-5 h-5 mr-2" />
+                  Start as a Creator
+                </Button>
+              </Link>
             </div>
           </div>
           
