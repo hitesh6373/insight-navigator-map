@@ -39,7 +39,7 @@ export const HowItWorksSection = () => {
                     <Search className="w-6 h-6 text-brand-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Step 1: Browse Campaigns</h4>
+                    <h4 className="font-semibold text-lg mb-2">Browse Campaigns</h4>
                     <p className="text-muted-foreground">Find campaigns that match your vibe and audience. Filter by niche, budget, and content type.</p>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ export const HowItWorksSection = () => {
                     <Video className="w-6 h-6 text-brand-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Step 2: Create Reel</h4>
+                    <h4 className="font-semibold text-lg mb-2">Create Reel</h4>
                     <p className="text-muted-foreground">Make videos as per the campaign description. Be authentic, be creative, be you.</p>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export const HowItWorksSection = () => {
                     <DollarSign className="w-6 h-6 text-brand-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Step 3: Get Paid</h4>
+                    <h4 className="font-semibold text-lg mb-2">Get Paid</h4>
                     <p className="text-muted-foreground">Receive payment based on the views you get. The more viral you go, the more you earn.</p>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ export const HowItWorksSection = () => {
                     <Target className="w-6 h-6 text-brand-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Step 1: Launch Campaign</h4>
+                    <h4 className="font-semibold text-lg mb-2">Launch Campaign</h4>
                     <p className="text-muted-foreground">Set your goals, budget, and upload campaign details. Define your target audience and content style.</p>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export const HowItWorksSection = () => {
                     <Video className="w-6 h-6 text-brand-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Step 2: Get Viral Content</h4>
+                    <h4 className="font-semibold text-lg mb-2">Get Viral Content</h4>
                     <p className="text-muted-foreground">Get reels made as per your brief on your dashboard. Watch creators bring your vision to life.</p>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export const HowItWorksSection = () => {
                     <BarChart3 className="w-6 h-6 text-brand-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">Step 3: Track Performance</h4>
+                    <h4 className="font-semibold text-lg mb-2">Track Performance</h4>
                     <p className="text-muted-foreground">Monitor views, engagement, and results in real-time. Get detailed ROI analytics and insights.</p>
                   </div>
                 </div>
